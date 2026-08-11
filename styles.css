@@ -311,6 +311,11 @@
     }
     .daily-toggle.active { color: var(--ink); border-color: var(--ginkgo-soft); background: var(--ginkgo-soft); }
 
+    @media (max-width: 699px) {
+      .item-top { display: grid; gap: 8px; }
+      .item-top .tag { justify-self: start; }
+    }
+
     @media (min-width: 700px) {
       .wrap { width: min(1120px, calc(100% - 80px)); }
       .hero-inner { padding-bottom: 90px; }
@@ -323,7 +328,7 @@
       .split-grid, .crab-grid { grid-template-columns: repeat(2, 1fr); }
       .lunch-grid { grid-template-columns: repeat(3, 1fr); }
       .lunch-option img { height: 170px; }
-      .status-grid { grid-template-columns: repeat(3, 1fr); }
+      .status-grid { grid-template-columns: repeat(2, 1fr); }
       .spot { grid-template-columns: 1fr; align-content: space-between; min-height: 180px; }
       .notes-grid { grid-template-columns: repeat(2, 1fr); }
       .bottom-nav { left: 50%; right: auto; width: 520px; transform: translateX(-50%); }
@@ -340,6 +345,7 @@
       .food-grid { grid-template-columns: repeat(4, 1fr); }
       .restaurant-guide-grid { grid-template-columns: repeat(2, 1fr); }
       .guide-grid-three { grid-template-columns: repeat(3, 1fr); }
+      .status-grid { grid-template-columns: repeat(4, 1fr); }
       .feature-wide { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
       .feature-wide .guide-photo { min-height: 100%; aspect-ratio: auto; }
       .food-alley-grid .feature-wide { grid-column: 1 / -1; }
