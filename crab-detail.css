@@ -1,0 +1,76 @@
+:root {
+  --ivory: #f3efe5;
+  --paper: #fbf8f0;
+  --ink: #22211e;
+  --muted: #716c62;
+  --line: #d9d0bd;
+  --gold: #c2a13a;
+  --brown: #503a2c;
+  --wine: #6d3028;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--ivory);
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { width: min(1060px, calc(100% - 36px)); margin-inline: auto; }
+.topbar { border-bottom: 1px solid rgba(255,255,255,.18); background: var(--ink); color: var(--paper); }
+.topbar .wrap { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.brand { font-family: "Playfair Display", serif; letter-spacing: .08em; text-decoration: none; }
+.back { color: #d5cec2; font-size: .82rem; text-decoration: none; }
+.hero { background: var(--ink); color: var(--paper); }
+.hero-grid { display: grid; gap: 34px; padding: 64px 0 70px; }
+.eyebrow { margin: 0 0 12px; color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+h1, h2, h3 { font-family: "Noto Serif TC", serif; font-weight: 600; }
+h1 { margin: 0; font-size: clamp(2.3rem, 9vw, 5.4rem); line-height: 1.08; letter-spacing: -.045em; }
+.korean { margin-top: 12px; color: #aaa49a; font-size: 1rem; }
+.lead { max-width: 680px; margin: 25px 0 0; color: #c8c1b5; }
+.hero figure { margin: 0; overflow: hidden; background: #151512; }
+.hero img { width: 100%; height: 100%; min-height: 280px; display: block; object-fit: cover; }
+figcaption { padding: 7px 10px; color: #aaa49a; background: #292824; font-size: .7rem; }
+main section { padding: 64px 0; }
+.facts { background: var(--paper); }
+.fact-grid { display: grid; gap: 1px; border: 1px solid var(--line); background: var(--line); }
+.fact { min-height: 132px; padding: 22px; background: var(--paper); }
+.fact b { display: block; margin-bottom: 8px; color: var(--brown); font-size: .75rem; letter-spacing: .08em; }
+.fact span { display: block; color: var(--muted); font-size: .9rem; }
+.section-head { max-width: 720px; margin-bottom: 30px; }
+.section-head h2 { margin: 0; font-size: clamp(1.8rem, 6vw, 3.4rem); line-height: 1.25; letter-spacing: -.035em; }
+.section-head p { margin: 14px 0 0; color: var(--muted); }
+.notice { padding: 22px; border-left: 4px solid var(--gold); background: #ebe2cc; }
+.notice strong { display: block; margin-bottom: 6px; color: var(--brown); }
+.notice p { margin: 0; color: #625a4d; font-size: .9rem; }
+.cards { display: grid; gap: 16px; }
+.card { padding: 24px; border-top: 1px solid var(--ink); background: rgba(255,255,255,.38); }
+.card h3 { margin: 0 0 12px; font-size: 1.25rem; }
+.card p, .card li { color: var(--muted); font-size: .9rem; }
+.card ul { margin: 0; padding-left: 1.15rem; }
+.card li + li { margin-top: 7px; }
+.links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.button { padding: 9px 13px; border: 1px solid var(--brown); color: var(--brown); text-decoration: none; font-size: .78rem; }
+.button.primary { color: var(--paper); background: var(--brown); }
+.sources { background: var(--ink); color: var(--paper); }
+.sources .section-head p { color: #aaa49a; }
+.sources-list { display: grid; gap: 10px; }
+.sources-list a { padding: 14px 16px; border: 1px solid #4d4a44; color: #d8d1c5; text-decoration: none; font-size: .85rem; }
+.other-pages { display: grid; gap: 12px; }
+.other-pages a { padding: 18px; border: 1px solid var(--line); background: var(--paper); text-decoration: none; }
+.other-pages b { display: block; font-family: "Noto Serif TC", serif; }
+.other-pages span { color: var(--muted); font-size: .78rem; }
+footer { padding: 34px 0; color: var(--muted); border-top: 1px solid var(--line); font-size: .78rem; }
+
+@media (min-width: 700px) {
+  .hero-grid { grid-template-columns: 1.02fr .98fr; align-items: center; }
+  .hero figure { height: 420px; }
+  .fact-grid { grid-template-columns: repeat(3, 1fr); }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .other-pages { grid-template-columns: repeat(2, 1fr); }
+}
+
